@@ -27,5 +27,15 @@ def main():
             print(f'Los multiplos de {numero} son:\n{multiplo}')
             print(f'La suma de los multiplos de {numero} es:\n{sum(multiplo)}')
             break
-if __name__ == '__main__':
+
+def run():
     main()
+    intro = input('¿Deseas seguir en el programa? si/no: ')
+    
+    if intro == 'si':
+        main()
+    elif intro == 'no':
+        print('!Adios¡')
+        
+if __name__ == '__main__':
+    run()
