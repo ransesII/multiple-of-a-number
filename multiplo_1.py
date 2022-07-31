@@ -29,15 +29,24 @@ def main():
             print(f'Los multiplos de {numero} son:\n{multiplo}')
             print(f'La suma de los multiplos de {numero} es:\n{sum(multiplo)}')
             break
-
+    
+def evaluar_intro(intro):
+    intro = str(intro)
+    while intro == 'si':
+        main()
+        intro = input('¿Deseas seguir en el programa? si/no: ')
+        evaluar_intro(intro)
+        break
+    else:
+        if intro == 'no':
+            print('!Adios¡')
+        
 def run():
+
     main()
     intro = input('¿Deseas seguir en el programa? si/no: ')
-    
-    if intro == 'si':
-        main()
-    elif intro == 'no':
-        print('!Adios¡')
-        
+    evaluar_intro(intro)
+
+
 if __name__ == '__main__':
     run()
