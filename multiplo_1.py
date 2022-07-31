@@ -14,7 +14,9 @@ def main():
                 print('!Atencion¡: uno o ambos valores que ingresaste es negativo, vuelve a ingresar los numeros')
         except:
             print('!Atencion¡: ingresa solo números enteros positivos')
-            break
+            main() #al aplicar recursividad, me permite no romper el codigo subitamente, y ejecutar las instrucciones varias veces mas
+            break 
+        
         
         if (numero  == int(numero) > 0) and (rango == int(rango) > 0):
             
