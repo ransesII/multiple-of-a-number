@@ -31,7 +31,6 @@ def main():
             break
     
 def evaluar_intro(intro):
-    intro = str(intro)
     while intro == 'si':
         main()
         intro = input('¿Deseas seguir en el programa? si/no: ')
@@ -40,13 +39,15 @@ def evaluar_intro(intro):
     else:
         if intro == 'no':
             print('!Adios¡')
-        
+        elif (intro != 'si') or (intro != 'no'):
+            print('Ingresa "si" o "no" por favor')
+            intro = input('¿Deseas seguir en el programa? si/no: ')
+            evaluar_intro(intro)
+            
 def run():
-
     main()
     intro = input('¿Deseas seguir en el programa? si/no: ')
     evaluar_intro(intro)
-
 
 if __name__ == '__main__':
     run()
