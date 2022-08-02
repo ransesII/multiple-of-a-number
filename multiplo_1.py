@@ -22,12 +22,14 @@ def main():
             
             #Proceso
             multiplo = []
-            for i in range(numero, rango):
+            for i in range(numero, rango + 1):
                 if i % numero == 0:
                     multiplo.append(i)
             #Salida
+            print(f'\n* Hasta {rango} el {numero} tiene {len(multiplo)} multiplos 👀')
+            input('\n* Presiona |ENTER| para continuar')
             print(f'\n* Los multiplos de {numero} son:\n{multiplo} 🥳')
-            print(f'\n* La suma de los multiplos de {numero} es: {sum(multiplo)} 🥳')
+            print(f'\n* La suma de los multiplos de {numero} hasta {rango } es: {sum(multiplo)} 😲')
             break
     
 def evaluar_intro(intro):
