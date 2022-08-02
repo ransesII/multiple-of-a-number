@@ -7,13 +7,13 @@ def main():
     while True: # True indica que el bucle es infinito hasta que se cumpla la condicion "if" de abajo
         try:
             #Entradas
-            numero = int(input('Escribe un numero entero: '))
-            rango = int(input('¿hasta donde quieres hallar los multiplos? escribe un entero: '))
+            numero = int(input('\n* Escribe el numero entero positivo al que le vas hallar los multiplos: '))
+            rango = int(input('* ¿hasta donde quieres hallar los multiplos? escribe un numero entero positivo: '))
 
             if(numero < 0) or (rango < 0):
-                print('!Atencion¡: uno o ambos valores que ingresaste es negativo, vuelve a ingresar los numeros')
+                print('\n!Atencion¡: <<Uno o ambos valores que ingresaste es negativo, vuelve a ingresar los numeros>> 😔')
         except:
-            print('!Atencion¡: ingresa solo números enteros positivos')
+            print('\n!Atencion¡: <<Ingresa solo números enteros positivos>> 😞')
             main() #al aplicar recursividad, me permite no romper el codigo subitamente, y ejecutar las instrucciones varias veces mas
             break 
         
@@ -26,8 +26,8 @@ def main():
                 if i % numero == 0:
                     multiplo.append(i)
             #Salida
-            print(f'Los multiplos de {numero} son:\n{multiplo}')
-            print(f'La suma de los multiplos de {numero} es:\n{sum(multiplo)}')
+            print(f'\n* Los multiplos de {numero} son:\n{multiplo} 🥳')
+            print(f'\n* La suma de los multiplos de {numero} es: {sum(multiplo)} 🥳')
             break
     
 def evaluar_intro(intro):
@@ -38,13 +38,21 @@ def evaluar_intro(intro):
         break
     else:
         if intro == 'no':
-            print('!Adios¡')
+            print('\n!Adios¡ 😎\n')
         elif (intro != 'si') or (intro != 'no'):
-            print('Ingresa "si" o "no" por favor')
+            print('\n* Ingresa "si" o "no" por favor')
             intro = input('¿Deseas seguir en el programa? si/no: ')
             evaluar_intro(intro)
             
 def run():
+    introduccion = """
+    *********************** MULTIPLO *************************
+                Hola y Bienvenido a MULTIPLO 😊\n
+        Este es un programa que halla los multiplos de 
+        cualquier numero y tambien suma los multiplos hallados\n
+    **********************************************************
+    """
+    print(introduccion)
     main()
     intro = input('¿Deseas seguir en el programa? si/no: ')
     evaluar_intro(intro)
