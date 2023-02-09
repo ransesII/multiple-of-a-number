@@ -10,9 +10,9 @@ def main():
             numero = int(input('\n* Escribe el numero entero positivo al que le vas hallar los multiplos: '))
             rango = int(input('* ¿hasta donde quieres hallar los multiplos? escribe un numero entero positivo: '))
 
-            if(numero < 0) or (rango < 0):
+            if(numero < 0) or (rango < 0):#este if le indica al except que los numeros negativos son errores y vuelva a ejecutar main()
                 print('\n!Atencion¡: <<Uno o ambos valores que ingresaste es negativo, vuelve a ingresar los numeros>> 😔')
-        except:
+        except:# se ejecuta cuando hay un error por defecto dentro del try o añadido por nosotros como en el if de arriba (linea 13)
             print('\n!Atencion¡: <<Ingresa solo números enteros positivos>> 😞')
             main() #al aplicar recursividad, me permite no romper el codigo subitamente, y ejecutar las instrucciones varias veces mas
             break 
